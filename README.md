@@ -66,7 +66,7 @@ aws s3api create-bucket --bucket kops-abhi-storage --region us-east-1
 ```
 
 ### Create the cluster 
-
+While Creating th k8s cluster using KOPS cmd below, we have used the k8s cluster domain as k8s.local, but in realtime devops production env, it will be AWS domain, azure domain etc.
 ```
 kops create cluster --name=demok8scluster.k8s.local --state=s3://kops-abhi-storage --zones=us-east-1a --node-count=1 --node-size=t2.micro --master-size=t2.micro  --master-volume-size=8 --node-volume-size=8
 ```
